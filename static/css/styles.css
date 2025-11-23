@@ -4,6 +4,16 @@ body {
     padding: 2rem;
 }
 
-h1 {
-    color: #007BFF;
+h1,h2 {
+    color: #051c35;
+}
+
+header{
+    display:flex;
+    justify-content: space-between;
+}
+
+nav menu{
+    list-style-type: none;
+    padding-left: 0;
 }

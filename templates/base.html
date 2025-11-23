@@ -5,11 +5,22 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
+    <header>
+    <div>
+        <h1>Flask Demos</h1>
     <nav>
-        <a href="/">Home</a> |
-        <a href="/about">About</a>
-        <a href="/profile">Profile</a>
+        <menu>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/fruits">Fruits (list)</a></li>
+            <li><a href="/profile">Profile (dictionary)</a></li>
+        </menu>
     </nav>
+    </div>
+    <div>
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Flask Logo">
+    </div>
+    </header>
     {% block content %}
     <!-- Page-specific content goes here -->
     {% endblock %}

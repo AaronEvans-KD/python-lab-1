@@ -6,21 +6,21 @@ app = Flask(__name__)
 # Define a route and view function
 @app.route('/')
 def index():
-    return render_template('index.html', name='Martin')
+    return render_template('index.html', name='Flask Demos')
 
 @app.route('/about')
 def about():
-    fruit_list  = ["apple", "banana", "cherry"]
-    return render_template('about.html', title='About', fruits = fruit_list, description='This is a simple Flask web app.')
+    return render_template('about.html', title='About Us', description='Template example with multiple strings passed to it.')
 
-@app.route('/goodbye')
-def goodbye():
-    return 'Goodbye Friend'
+@app.route('/fruits')
+def fruits():
+    fruit_list  = ["apple", "banana", "cherry"]
+    return render_template('fruits.html', title='List Example', fruits = fruit_list)
 
 @app.route('/profile')
 def show_profile():
     user = {"name": "Alice", "age": 30}
-    return render_template("profile.html", user=user)
+    return render_template("profile.html", title='Dictionary Example', user=user)
 
 # Run the app in debug mode
 if __name__ == '__main__':
